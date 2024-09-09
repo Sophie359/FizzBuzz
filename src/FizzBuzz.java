@@ -3,7 +3,7 @@
  */
 class FizzBuzz {
 
-    public static void main(String[] args) {
+    public static void main() {
 
         for (int i = 1; i < 100; i++) {
 
@@ -31,22 +31,30 @@ class FizzBuzz {
             }
         }
     }
+
+    public static void FizzBuzzWhile(int i) {
+    }
 }
 
 class FizzBuzzWhile {
     public static void main(String[] args) {
         int i = 1;
         while (i <= 100) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            } else {
-                System.out.println(i);
-            }
-            i++;
+            i = getI(i);
         }
+    }
+
+    private static int getI(int i) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            System.out.println("FizzBuzz");
+        } else if (i % 3 == 0) {
+            System.out.println("Fizz");
+        } else if (i % 5 == 0) {
+            System.out.println("Buzz");
+        } else {
+            System.out.println(i);
+        }
+        i++;
+        return i;
     }
 }
